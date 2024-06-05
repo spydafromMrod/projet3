@@ -159,4 +159,4 @@ Werkzeug==3.0.1
 wheel==0.42.0
 wrapt==1.16.0
 zipp==3.18.1
-beautifulsoup4==4.7.1
+plotly.express==0.4.1
