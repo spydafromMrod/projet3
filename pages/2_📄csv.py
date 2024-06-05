@@ -1,7 +1,7 @@
-from fonctions.functions import display_data
+
 import streamlit as st
 import pandas as pd
-
+from fonctions.functions import display_data
 st.header("fichiers CSV")
 
 
