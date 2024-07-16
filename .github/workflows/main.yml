@@ -26,14 +26,12 @@ jobs:
 
 
 
-    - name: Build Docker image
-      run: docker build -t home.py .
+    steps:
+      - uses: action/checkout@v1
 
-    - name: Push Docker image
-      env:
-        DOCKER_USERNAME: ${{ secrets.spydafrommrod4 }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKERPSSWRD }}
-      run: |
-        echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-        docker tag projetdit:v1 $DOCKER_USERNAME/projetdit:latest
-        docker push $DOCKER_USERNAME/projetdit:latest
+      - name: Push Docker image
+      
+        run: |
+          echo "${{ secrets.DOCKERPSSWRD }}" | docker login -u "spydafrommrod4" --password-stdin
+          docker image build -t spydafrommrod4/projetdit .
+          docker push spydafrommrod4/projetdit:v2
