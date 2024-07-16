@@ -39,12 +39,12 @@ jobs:
 
     - name: Log in to Docker Hub
       env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKER_USERNAME: spydafrommrod4
+        DOCKER_PASSWORD: Mballo12345!
       run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
     - name: Build Docker image
       run: docker image build -t spydafrommrod4/projetdit .
 
     - name: Push Docker image
-      run: docker pull spydafrommrod4/projetdit:v2
+      run: docker push spydafrommrod4/projetdit:v1
