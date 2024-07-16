@@ -47,4 +47,4 @@ jobs:
       run: docker image build -t spydafrommrod4/projetdit .
 
     - name: Push Docker image
-      run: docker push spydafrommrod4/projetdit:v1
+      run: docker push spydafrommrod4/projetdit:latest
