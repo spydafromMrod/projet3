@@ -7,7 +7,7 @@ def main():
     st.title("Projet Groupe#3")
 
     # Description du projet
-    st.subheader("Groupe 3")
+    st.subheader("Groupe 3.")
     st.markdown("""
     - **KAMBOU **
     - **MBALLO **
