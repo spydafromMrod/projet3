@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
 
     - name: Set up Python
       uses: actions/setup-python@v3
@@ -33,4 +33,4 @@ jobs:
       run: docker image build -t spydafrommrod4/projetdit .
 
     - name: Push Docker image
-      run: docker push spydafrommrod4/projetdit:v3
+      run: docker push spydafrommrod4/projetdit:v1
