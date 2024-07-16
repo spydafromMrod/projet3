@@ -30,7 +30,7 @@ jobs:
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
         sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
         sudo apt-get update
-        sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+        sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 
     - name: Configure DNS
       run: |
@@ -44,7 +44,7 @@ jobs:
       run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
 
     - name: Build Docker image
-      run: docker image build -t spydafrommrod4/projetdit .
+      run: docker build -t spydafrommrod4/projetdit:latest .
 
     - name: Push Docker image
       run: docker push spydafrommrod4/projetdit:latest
