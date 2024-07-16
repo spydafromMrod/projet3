@@ -9,10 +9,9 @@ def main():
     # Description du projet
     st.subheader("Groupe 3")
     st.markdown("""
-    - **ANGUILET Joan-Yves Darys**
-    - **KAMBOU Celestin**
-    - **MBALLO Cheikh Abdou Khadre**
-    - **TANI NOUR Amal**
+    - **KAMBOU **
+    - **MBALLO **
+    - **NAJEM  **
     """)
 
     st.subheader("Objectif")
