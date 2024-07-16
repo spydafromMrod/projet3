@@ -48,3 +48,6 @@ jobs:
 
     - name: Push Docker image
       run: docker push spydafrommrod4/projetdit:latest
+
+    - name: Run Docker Compose
+      run: docker-compose up -d
